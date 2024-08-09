@@ -29,3 +29,33 @@ foreach ($users as $user) {
 
     echo $saluto . " " . $user['name'] . " " . $user['surname'] . "\n";
 }
+
+echo "\n\n";
+
+
+
+// Selfwork PHP 5
+
+$numbers = [10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+function calcolaMediaNumeriPari($array)
+{
+    $somma = 0;
+    $contatore = 0;
+
+    foreach ($array as $numero) {
+        if ($numero % 2 == 0) { // Verifica se il numero è pari
+            $somma += $numero;
+            $contatore++;
+        }
+    }
+
+    if ($contatore > 0) {
+        return $somma / $contatore;
+    } else {
+        return 0;
+    }
+}
+
+$media = calcolaMediaNumeriPari($numbers);
+echo "La media dei numeri pari è: " . $media;
